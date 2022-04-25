@@ -41,7 +41,9 @@ app.get('/tweets', (req, res) => {
 app.post('/tweets', (req, res) => {
     const body = req.body
     const username = req.body.username
-    const avatar = tweetsList.find( twet => twet.username === username )
+    console.log(userList)
+    const avatar = userList.find( user => console.log(user) )
+    console.log(avatar)
     const toTweet = {
         username : body.username,
         avatar : avatar.avatar,
